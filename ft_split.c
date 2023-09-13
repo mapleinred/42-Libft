@@ -6,7 +6,7 @@
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:26:48 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/11 12:59:28 by xzhang           ###   ########.fr       */
+/*   Updated: 2023/09/12 16:50:43 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,15 @@ static int	ft_countwords(const char *str, char c)
 	return (i);
 }
 
-static void	ft_freewords(char **s, int i)
+static void	*ft_freewords(char **s, int i)
 {
-	while (s[i])
+	while (i)
 	{
 		free(s[i]);
-		i++;
+		i--;
 	}
 	free(s);
+	return (0);
 }
 
 static int	ft_splitwords(char **result, char *str, char c)

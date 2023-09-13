@@ -6,9 +6,11 @@
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 15:12:15 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/11 18:03:19 by xzhang           ###   ########.fr       */
+/*   Updated: 2023/09/12 16:54:00 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

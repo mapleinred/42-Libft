@@ -6,13 +6,13 @@
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 11:35:23 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/10 13:06:09 by xzhang           ###   ########.fr       */
+/*   Updated: 2023/09/12 15:45:50 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	wahitespace(char c)
+int	whitespace(char c)
 {
 	if (c == 32 || (c >= 9 && c <= 13))
 		return (1);

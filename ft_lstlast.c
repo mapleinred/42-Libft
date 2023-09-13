@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 13:52:29 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/12 16:13:35 by xzhang           ###   ########.fr       */
+/*   Created: 2023/09/13 11:57:37 by xzhang            #+#    #+#             */
+/*   Updated: 2023/09/13 12:13:02 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstlast(t_list *lst)
 {
-	char	*newstr;
-	size_t	i;
-	size_t	j;
-
-	newstr = (char *)malloc(sizeof(*s) * (len + 1));
-	if (newstr == 0)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
+	while (lst)
 	{
-		if (i >= start && j < len)
-			newstr[j++] = s[i++];
+		if (!lst->next)
+			return (lst);
+		lst = lst->next;
 	}
-	newstr[j] = '\0';
-	return (newstr);
+	return (lst);
 }
+/*lst = lst->next;move to the next node return lst;
+ return a pointer to the last node
+ function is used to find and return a pointer to the last 
+ node in a linked list. It takes a pointer to the first node of the 
+ list (lst) as its argument*/

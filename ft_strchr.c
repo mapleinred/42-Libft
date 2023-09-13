@@ -6,7 +6,7 @@
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 16:44:29 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/08 21:32:11 by xzhang           ###   ########.fr       */
+/*   Updated: 2023/09/12 15:42:36 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s - 1);
 	if (c == '\0')
 		return ((char *)s);
-	return (NULL);
+	return (0);
 }

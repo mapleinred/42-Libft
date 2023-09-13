@@ -6,7 +6,7 @@
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:28:52 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/08 21:31:31 by xzhang           ###   ########.fr       */
+/*   Updated: 2023/09/12 15:11:37 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		d[i] = s[i]
-			i++;
+		d[i] = s[i];
+		i++;
 	}
 	return (dest);
 }

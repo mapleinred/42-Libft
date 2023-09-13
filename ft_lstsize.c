@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 13:52:29 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/12 16:13:35 by xzhang           ###   ########.fr       */
+/*   Created: 2023/09/13 11:49:16 by xzhang            #+#    #+#             */
+/*   Updated: 2023/09/13 11:56:27 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_lstsize(t_list *lst)
 {
-	char	*newstr;
-	size_t	i;
-	size_t	j;
+	int	len;
 
-	newstr = (char *)malloc(sizeof(*s) * (len + 1));
-	if (newstr == 0)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
+	len = 0;
+	while (lst)
 	{
-		if (i >= start && j < len)
-			newstr[j++] = s[i++];
+		len++;
+		lst = lst->next;
 	}
-	newstr[j] = '\0';
-	return (newstr);
+	return (len);
 }
+/*`ft_lstsize` counts the number of elements in a list 
+Returns the length of the list	
+increments counter while navigating to last node (lst->next)*/

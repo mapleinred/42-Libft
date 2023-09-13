@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 13:52:29 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/12 16:13:35 by xzhang           ###   ########.fr       */
+/*   Created: 2023/09/13 10:27:59 by xzhang            #+#    #+#             */
+/*   Updated: 2023/09/13 11:21:46 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstnew(void *content)
 {
-	char	*newstr;
-	size_t	i;
-	size_t	j;
+	t_list	*new;
 
-	newstr = (char *)malloc(sizeof(*s) * (len + 1));
-	if (newstr == 0)
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
-	{
-		if (i >= start && j < len)
-			newstr[j++] = s[i++];
-	}
-	newstr[j] = '\0';
-	return (newstr);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
+/*`ft_lstnew` creates a new element of type t_list
+ * Returns the new node. Else `NULL`
+ * declare t_list *new -> malloc -> malloc fail check
+ * -> init *(new.content) with void *content -> next pointer NULL
+ *  -> return new */

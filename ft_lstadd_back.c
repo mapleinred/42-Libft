@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 13:52:29 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/12 16:13:35 by xzhang           ###   ########.fr       */
+/*   Created: 2023/09/13 12:13:21 by xzhang            #+#    #+#             */
+/*   Updated: 2023/09/13 12:20:23 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char	*newstr;
-	size_t	i;
-	size_t	j;
+	t_list	*last;
 
-	newstr = (char *)malloc(sizeof(*s) * (len + 1));
-	if (newstr == 0)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
+	if (*lst == NULL)
+		*lst = new;
+	else
 	{
-		if (i >= start && j < len)
-			newstr[j++] = s[i++];
+		last = ft_lstlast(*lst);
+		last->next = new;
 	}
-	newstr[j] = '\0';
-	return (newstr);
 }
+/*
+`ft_lstadd_back` adds the node `new` at the end of the list
+t_list last (to be assigned the last node)
+if *lst == NULL, assign new to *lst
+ELSE
+uses the `ft_lstlast` to find the LAST NODE in the list
+then point its next field to the new node.*/
