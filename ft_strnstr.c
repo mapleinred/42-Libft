@@ -6,7 +6,7 @@
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:26:39 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/10 11:30:51 by xzhang           ###   ########.fr       */
+/*   Updated: 2023/09/15 07:52:48 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			while (big[i + j] == little[j] && (i + j) < len)
 			{
 				if (j == little_len - 1)
-					return ((char *)(big + 1));
+					return ((char *)(big + i));
 				j++;
 			}
 		}

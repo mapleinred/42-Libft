@@ -6,7 +6,7 @@
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:26:48 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/12 16:50:43 by xzhang           ###   ########.fr       */
+/*   Updated: 2023/09/15 10:27:15 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static int	ft_splitwords(char **result, char *str, char c)
 	i = 0;
 	while (i < len)
 	{
-		result[0][1] = str[i];
+		result[0][i] = str[i];
 		i++;
 	}
 	result[0][i] = 0;

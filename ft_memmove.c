@@ -6,7 +6,7 @@
 /*   By: xzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:08:35 by xzhang            #+#    #+#             */
-/*   Updated: 2023/09/08 21:31:44 by xzhang           ###   ########.fr       */
+/*   Updated: 2023/09/15 12:05:54 by xzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t	len;
 
 	len = 0;
+	if (!dest && !src)
+		return (NULL);
 	if (src < dest)
 	{
 		len = n;

@@ -6,7 +6,7 @@
 #    By: xzhang <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/12 11:05:05 by xzhang            #+#    #+#              #
-#    Updated: 2023/09/13 18:38:20 by xzhang           ###   ########.fr        #
+#    Updated: 2023/09/13 20:18:36 by xzhang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ BSRC	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 	  ft_lstmap.c
 
 OBJS	= ${SRCS:.c=.o}
-BONUS	=${BSRC;.c=.o}
+BONUS	=${BSRC:.c=.o}
 
 NAME	= libft.a
 LIBC	= ar rc
