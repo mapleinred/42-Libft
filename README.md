@@ -58,12 +58,11 @@ libft/
 git clone git@github.com:mapleinred/42-Libft.git
 cd libft
 
-## 2. Build the Library
+### 2. Use in Your Project
 
-Run the following command to compile all source files and create `libft.a`:
-
-```bash
-make
+### Include `libft.h` in your code:
+```c
+#include "libft.h"
 
 3. How to Use in Your Own Project
     To use libft in your C project:
@@ -86,11 +85,6 @@ make
     3. make fclean: removes object files and libft.a
     4. make re: rebuilds everything
     5. make bonus: builds additional bonus list functions
-
-
-
-
-
 
 # 42-Libft
 This project is your very first project as a student at 42. You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus.
