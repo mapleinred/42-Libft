@@ -65,14 +65,16 @@ cd libft
 ```c
 #include "libft.h"
 ```
-###3. How to Use in Your Own Project
+
+### 3. How to Use in Your Own Project
     To use libft in your C project:
     
     a. Make sure libft.a and libft.h are in your project directory or adjust include/library paths accordingly.
 
     b. Include the header in your code:
+    ```
         #include "libft.h"
-    
+    ```
     c. Compile your program with libft.a linked:
         gcc main.c -L. -lft
         Explanation:
