@@ -54,10 +54,11 @@ libft/
 
 ### 1. Clone the repository
 
-```bash
+```bash```
+
 git clone git@github.com:mapleinred/42-Libft.git
 cd libft
-
+```bash```
 ### 2. Use in Your Project
 
 ### Include `libft.h` in your code:
