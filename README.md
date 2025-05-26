@@ -64,8 +64,8 @@ cd libft
 ### Include `libft.h` in your code:
 ```c
 #include "libft.h"
-
-3. How to Use in Your Own Project
+```
+###3. How to Use in Your Own Project
     To use libft in your C project:
     
     a. Make sure libft.a and libft.h are in your project directory or adjust include/library paths accordingly.
